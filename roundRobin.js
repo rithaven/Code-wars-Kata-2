@@ -14,8 +14,7 @@ function roundRobin(jobs, slice, index) {
 
     totalExecutionTime += executedTime;
 
-    if (index === 0) index = queue.length - 1;
-    else index--;
+    index = index === 0 ? queue.length - 1 : index - 1;
   }
   return totalExecutionTime;
 }
